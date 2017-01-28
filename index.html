@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <title>Intersesting Places in Kolkata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Neighbourhood map</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+</head>
+<body>
+
+
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#"><b><i class="fa fa-spin fa-superpowers" aria-hidden="true"></i> Interesting Places in Kolkata</b></a>
+          </div>
+          <div class="navbar-header pull-right">
+          <i class="fa fa-align-justify" aria-hidden="true"></i>
+        </div>
+
+      </div>
+  </nav>
+
+    </nav>
+    <div id="map"></div>
+
+    <!-- ko if: apiError -->
+        <div class="api-error">
+            <h2 class="error_message" data-bind="text:error_message"></h2>
+        </div>
+    <!-- /ko -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="./js/model.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDilOv-f1eqcBIHK6XQSduNHugzchxNTPQ&libraries=places&callback=initMap" onerror="googleError()" async defer></script>
   </body>
 </html>

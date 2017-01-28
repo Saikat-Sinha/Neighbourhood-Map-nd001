@@ -1,0 +1,23 @@
+.navbar{
+  margin-bottom: 0 !important;
+  background: white !important;
+  border: 2px solid black !important;
+
+}
+.navbar-brand{
+  font-family: monospace;
+  font-size: 28px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black !important;
+}
+
+
+#map{
+  position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    float: right;
+    margin-right: 0;
+}
