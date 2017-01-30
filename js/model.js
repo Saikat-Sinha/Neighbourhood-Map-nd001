@@ -60,34 +60,31 @@ var places = [
         "location" : {
             "lat": 22.507280,
             "lng": 88.318920
-        }
+        },
+        "id": "5042c171e4b0364d85c31072"
     },
     {
-        "name": "Gelato Italiano",
+        "name": "Red Hot Chilli Pepper",
         "location" : {
-            "lat": 22.587342,
-            "lng": 88.407946
-        }
+            "lat": 22.538902,
+            "lng": 88.359306
+        },
+        "id": "4d7b9c9e8f89224b06c89326"
     },
     {
-        "name": "Mecca Masjid",
+        "name": "The Blue Poppy",
         "location" :{
-            "lat": 17.3604416,
-            "lng": 78.4735712
-        }
+            "lat": 22.548626,
+            "lng": 88.351258
+        },
+        "id": "4d43fd7b4e5d370413f4e593"
     },
     {
-        "name": "KBR National Park",
+        "name": "Jai Hind Dhaba",
         "location" :{
-            "lat": 17.4205891,
-            "lng": 78.4215581
-        }
-    },
-    {
-        "name": "Birla Mandir",
-        "location" :{
-            "lat": 17.4062367,
-            "lng": 78.4690601
-        }
+            "lat": 22.532975,
+            "lng": 88.352695
+        },
+        "id": "4d050f03347da1cd0d012f8f"
     }
 ]
