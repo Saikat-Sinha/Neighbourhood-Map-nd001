@@ -13,20 +13,39 @@
 <body>
 
 
-  <nav class="navbar navbar-default">
-      <div class="container-fluid">
+  <nav>
+    <ul class="list-unstyled main-menu">
 
-          <div class="navbar-header">
-              <a class="navbar-brand" href="#"><b><i class="fa fa-spin fa-superpowers" aria-hidden="true"></i> Interesting Places in Kolkata</b></a>
-          </div>
-          <div class="navbar-header pull-right">
-          <i class="fa fa-align-justify" aria-hidden="true"></i>
-        </div>
-
-      </div>
+      <!--Include your navigation here-->
+      <li class="text-right"><a href="#" id="nav-close">X</a></li>
+      <li><a href="#">Menu One <span class="icon"></span></a></li>
+      <li><a href="#">Menu Two <span class="icon"></span></a></li>
+      <li><a href="#">Menu Three <span class="icon"></span></a></li>
+      <li><a href="#">Dropdown</a>
+        <ul class="list-unstyled">
+            <li class="sub-nav"><a href="#">Sub Menu One <span class="icon"></span></a></li>
+            <li class="sub-nav"><a href="#">Sub Menu Two <span class="icon"></span></a></li>
+            <li class="sub-nav"><a href="#">Sub Menu Three <span class="icon"></span></a></li>
+            <li class="sub-nav"><a href="#">Sub Menu Four <span class="icon"></span></a></li>
+            <li class="sub-nav"><a href="#">Sub Menu Five <span class="icon"></span></a></li>
+        </ul>
+      </li>
+      <li><a href="#">Menu Four <span class="icon"></span></a></li>
+      <li><a href="#">Menu Five <span class="icon"></span></a></li>
+    </ul>
   </nav>
 
-    </nav>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+
+      <!--Include your brand here-->
+      <a class="navbar-brand" href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Restaurants in Kolkata</a>
+      <div class="navbar-header pull-right">
+        <a id="nav-expander" class="nav-expander fixed">
+          MENU &nbsp;<i class="fa fa-bars fa-lg white"></i>
+        </a>
+      </div>
+  </div>
+
     <div id="map"></div>
 
     <!-- ko if: apiError -->
@@ -37,7 +56,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+    <script src="./js/menu.js"></script>
     <script src="./js/model.js"></script>
     <script src="./js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDilOv-f1eqcBIHK6XQSduNHugzchxNTPQ&libraries=places&callback=initMap" onerror="googleError()" async defer></script>

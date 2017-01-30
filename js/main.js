@@ -11,7 +11,7 @@ var initMap = function(){
     // displays the requested map content in map div
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 22.572646, lng: 88.363895},
-        zoom: 10
+        zoom: 12
     });
     // displays location information in window when marker clicked
     infowindow = new google.maps.InfoWindow();

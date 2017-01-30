@@ -1,65 +1,72 @@
 var places = [
     {
-        "name": "Golconda Fort",
+        "name": "Peter Cat",
         "location" : {
-            "lat": 17.385363,
-            "lng":78.404130
+            "lat": 22.552416,
+            "lng": 88.352552
+                     },
+        "id": "4c284edefe6e2d7f5417533c"
+    },
+    {
+        "name": "6 Ballygunge Palace",
+        "location" : {
+            "lat": 22.590192,
+            "lng": 88.409305
+          },
+        "id": "4d54ed50c6edf04d1af5bea2"
+    },
+    {
+        "name": "Golden Joy",
+        "location" : {
+            "lat": 22.546261,
+            "lng": 88.386812
+        },
+        "id": "4cdea62ef8cdb1f7a35e8c12"
+    },
+    {
+        "name": "Oh! Calcutta",
+        "location" : {
+            "lat": 22.544379,
+            "lng": 88.347629
+        },
+        "id" : "4c0a0ee8bbc676b0b24449d5"
+    },
+    {
+        "name": "Barbecue Nation",
+        "location" : {
+            "lat": 22.552858,
+            "lng": 88.354091
+        },
+        "id": "4d443e6b0349224b37f4f74e"
+    },
+    {
+        "name": "Mainland China",
+        "location" : {
+            "lat": 22.502061,
+            "lng": 88.362032
+        },
+        "id": "4c0651d9761ac9b60ab92074"
+    },
+    {
+        "name": "Indian Coffee House",
+        "location" : {
+            "lat": 22.576672,
+            "lng": 88.362910
+        },
+        "id": "4c2db6124e132d7fb6d79cdf"
+    },
+    {
+        "name": "Aminia Hotel",
+        "location" : {
+            "lat": 22.507280,
+            "lng": 88.318920
         }
     },
     {
-        "name": "Char Minar",
+        "name": "Gelato Italiano",
         "location" : {
-            "lat": 17.361564,
-            "lng": 78.474665
-        }
-    },
-    {
-        "name": "Qutub Shahi Tombs",
-        "location" : {
-            "lat": 17.394746,
-            "lng": 78.394717
-        }
-    },
-    {
-        "name": "Nehru Zoological Park",
-        "location" : {
-            "lat": 17.348305,
-            "lng": 78.442511
-        }
-    },
-    {
-        "name": "Salar Jung Museum",
-        "location" : {
-            "lat": 17.3713733,
-            "lng": 78.4804193
-        }
-    },
-    {
-        "name": "NTR Gardens",
-        "location" : {
-            "lat": 17.4126164,
-            "lng": 78.4687845
-        }
-    },
-    {
-        "name": "Falaknuma Palace",
-        "location" : {
-            "lat": 17.330955,
-            "lng": 78.467504
-        }
-    },
-    {
-        "name": "Lumbini Park",
-        "location" : {
-            "lat": 17.4100675,
-            "lng": 78.4732084
-        }
-    },
-    {
-        "name": "Prasads IMAX",
-        "location" : {
-            "lat": 17.413143,
-            "lng": 78.4657801
+            "lat": 22.587342,
+            "lng": 88.407946
         }
     },
     {
