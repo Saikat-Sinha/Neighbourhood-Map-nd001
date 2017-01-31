@@ -11,10 +11,13 @@ var initMap = function(){
     // displays the requested map content in map div
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 22.572646, lng: 88.363895},
-        zoom: 12
+        zoom: 12,
+        disableDefaultUI: true
     });
     // displays location information in window when marker clicked
-    infowindow = new google.maps.InfoWindow();
+    infowindow = new google.maps.InfoWindow({
+      maxWidth: 200,
+    });
 
     for(var i=0; i<places.length; i++){
         AddMarker(places[i]);
@@ -89,7 +92,7 @@ var FoursquareData = function(place){
     }
     var today = ""+yyyy+mm+dd+"";
 
-    var venue_id = place.venue_id;
+    var venue_id = place.id;
     var client_id = "BWUSFIWLOPWY0F3RPSBEER3Y5AVNORL4SJ5UUH2LG2RLUSIH";
     var client_secret = "0DFTYZIDWMTDRMGHMSXZ1RZL12IEMDBGWVSAA0XNJ0K1R3AV";
     var FoursquareUrl = "https://api.foursquare.com/v2/venues/"+venue_id+"?client_id="+client_id+"&client_secret="+client_secret+"&v="+today+"" ;
@@ -105,8 +108,6 @@ var FoursquareData = function(place){
             if(data.response.venue.tips.groups[0].items[0].text){
                 self(data.response.venue.tips.groups[0].items[0].text);
             }
-    }).error(function(data){
-        FourSquareError();
     })
 
 };
