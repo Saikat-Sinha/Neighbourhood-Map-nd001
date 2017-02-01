@@ -93,8 +93,8 @@ var FoursquareData = function(place){
     var today = ""+yyyy+mm+dd+"";
 
     var venue_id = place.id;
-    var client_id = "BWUSFIWLOPWY0F3RPSBEER3Y5AVNORL4SJ5UUH2LG2RLUSIH";
-    var client_secret = "0DFTYZIDWMTDRMGHMSXZ1RZL12IEMDBGWVSAA0XNJ0K1R3AV";
+    var client_id = "EMVNNHEUJZOFSHXNEIX14LST3LAZ2VCUQIKDSKZQI254CQMW";
+    var client_secret = "22X3G0GXYO53WMAKYN1CN0KDXHRWZ4ZW4LAETW5KNAESW2IC";
     var FoursquareUrl = "https://api.foursquare.com/v2/venues/"+venue_id+"?client_id="+client_id+"&client_secret="+client_secret+"&v="+today+"" ;
 
     $.ajax({
@@ -102,11 +102,13 @@ var FoursquareData = function(place){
         dataType:"json",
         async:true
     }).success(function(data){
+            self.des_name(data.response.venue.name);
+            self.rating(data.response.venue.rating);
             var image_prefix = data.response.venue.bestPhoto.prefix;
             var image_suffix = data.response.venue.bestPhoto.suffix;
-            self(image_prefix +"320x200"+ image_suffix);
+            self.location_image(image_prefix +"320x200"+ image_suffix);
             if(data.response.venue.tips.groups[0].items[0].text){
-                self(data.response.venue.tips.groups[0].items[0].text);
+                self.review(data.response.venue.tips.groups[0].items[0].text);
             }
     })
 
@@ -120,6 +122,10 @@ var viewModel = function(){
     var self = this;
     this.markersArray = ko.observableArray([]);
     this.query = ko.observable();
+    this.location_image = ko.observable();
+    this.des_name = ko.observable();
+    this.rating = ko.observable();
+    this.review = ko.observable();
     this.apiError = ko.observable(false);
     this.error_message = ko.observable();
     // filters the places array when searched in a query input
@@ -140,9 +146,19 @@ var viewModel = function(){
         }
     });
 
+    // when name of the location clicked displays infowindow
+    this.viewPlace = function(place){
+        var check_myLatLng = {lat:place.location.lat,
+                               lng:place.location.lng};
+        stopAnimation();
+        startAnimation(check_myLatLng);
+        FoursquareData(place);
+    };
+    this.closeDesc = function(){
+        self.des_name(null);
+    };
 
 };
-
 
 
 ko.applyBindings(viewModel);

@@ -35,6 +35,21 @@
 
     <div id="map"></div>
 
+    <!-- ko if: des_name -->
+    <div class="description" >
+        <img class="fs-logo" src="img/foursquare_logo.png" alt="Foursquare logo">
+        <img data-bind="attr: {src: location_image}" alt="Foursquare location image"/><br/>
+        <h3 data-bind="text: des_name"></h3>
+        <hr>
+        <!-- ko if: rating -->
+        <p>Rating: <span data-bind="text: rating"></span></p>
+        <!-- /ko -->
+        <h3>Review:</h3>
+        <p data-bind="text: review"></p>
+        <button class="close-btn" data-bind="click: closeDesc">X</button>
+    </div>
+    <!-- /ko -->
+
     <!-- ko if: apiError -->
         <div class="api-error">
             <h2 class="error_message" data-bind="text:error_message"></h2>
